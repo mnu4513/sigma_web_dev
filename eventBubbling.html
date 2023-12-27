@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Event bubbling</title>
+
+    <style>
+        .container {
+            border: 3px solid red;
+            margin: 50px;
+            background-color: blueviolet;
+        }
+
+        .child1 {
+            border: 3px solid black;
+            margin: 50px;
+            background-color: white;
+        }
+
+        .box1 {
+            border: 3px solid black;
+            margin: 50px;
+            background-color: rgb(225, 235, 141);
+            padding: 30px;
+        }
+
+        #box2 {
+            border: 3px solid black;
+            margin: 50px;
+            background-color: rgb(225, 235, 141);
+            padding: 30px;
+        }
+
+        .child2 {
+            border: 3px solid black;
+            margin: 50px;
+            background-color: white;
+        }
+
+        #newBox {
+            border: 3px solid yellow;
+            background-color: aqua;
+            margin: 50px;
+            padding: 30px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+
+        <div class="child1">
+            <div class="box1">
+                Event bubbling will work here
+            </div>
+
+            <div id="box2">
+                box2
+            </div>
+
+        </div>
+
+        <div class="child2">
+            <div id="newBox">
+                Event bubbling will not work here. stopPropagation() used here.
+            </div>
+            </span>
+        </div>
+        <script type="module" src="./eventBubbling.js"></script>
+</body>
+
+</html>
